@@ -80,7 +80,7 @@ create
 start
 ```
 
-**→ See [Simple Strategy Guide](KASPA_SIMPLE_STRATEGY_GUIDE.md) for full details**
+**→ See [Simple Strategy Guide](docs/KASPA_SIMPLE_STRATEGY_GUIDE.md) for full details**
 
 ### Option 2: Advanced Custom Strategy
 
@@ -93,7 +93,7 @@ import kaspa_arbitrage_v2
 start
 ```
 
-**→ See [Setup Guide](KASPA_ARBITRAGE_SETUP_GUIDE.md) for full details**
+**→ See [Setup Guide](docs/KASPA_ARBITRAGE_SETUP_GUIDE.md) for full details**
 
 ---
 
@@ -103,7 +103,7 @@ This package includes comprehensive documentation:
 
 ### Main Guides
 
-1. **[KASPA_ARBITRAGE_SETUP_GUIDE.md](KASPA_ARBITRAGE_SETUP_GUIDE.md)**
+1. **[KASPA_ARBITRAGE_SETUP_GUIDE.md](docs/KASPA_ARBITRAGE_SETUP_GUIDE.md)**
    - Complete setup instructions
    - Detailed configuration options
    - Risk management strategies
@@ -111,20 +111,39 @@ This package includes comprehensive documentation:
    - Advanced features
    - **Best for:** Users who want full control and advanced features
 
-2. **[KASPA_SIMPLE_STRATEGY_GUIDE.md](KASPA_SIMPLE_STRATEGY_GUIDE.md)**
+2. **[KASPA_SIMPLE_STRATEGY_GUIDE.md](docs/KASPA_SIMPLE_STRATEGY_GUIDE.md)**
    - Quick start with built-in strategy
    - Simple configuration files
    - Running multiple instances
    - Basic monitoring
    - **Best for:** Beginners and quick deployment
 
+4. **[GITHUB_SETUP_GUIDE.md](docs/GITHUB_SETUP_GUIDE.md)**
+   - How to upload this repository
+   - Repository organization tips
+   - Git commands and best practices
+
 ### Strategy Files
 
-3. **[kaspa_arbitrage_v2.py](kaspa_arbitrage_v2.py)**
+5. **[kaspa_arbitrage_v2.py](strategies/kaspa_arbitrage_v2.py)**
    - Advanced V2 strategy implementation
    - Full source code with comments
    - Customizable parameters
    - ArbitrageExecutor integration
+
+### Configuration Examples
+
+6. **[Config Examples](configs/examples/)**
+   - Ready-to-use YAML configurations
+   - Multiple exchange pair examples
+   - Detailed parameter explanations
+
+### Utility Scripts
+
+7. **[Scripts](scripts/)**
+   - Status monitoring tools
+   - Performance analysis scripts
+   - Automated reporting
 
 ---
 
@@ -494,9 +513,11 @@ For questions or support:
 
 **Ready to start arbitraging Kaspa? Choose your strategy and begin with the appropriate guide!**
 
-- 🚀 **Quick Start**: [Simple Strategy Guide](KASPA_SIMPLE_STRATEGY_GUIDE.md)
-- 🔧 **Advanced Setup**: [Full Setup Guide](KASPA_ARBITRAGE_SETUP_GUIDE.md)
-- 💻 **Custom Strategy**: [kaspa_arbitrage_v2.py](kaspa_arbitrage_v2.py)
+- 🚀 **Quick Start**: [Simple Strategy Guide](docs/KASPA_SIMPLE_STRATEGY_GUIDE.md)
+- 🔧 **Advanced Setup**: [Full Setup Guide](docs/KASPA_ARBITRAGE_SETUP_GUIDE.md)
+- 💻 **Custom Strategy**: [kaspa_arbitrage_v2.py](strategies/kaspa_arbitrage_v2.py)
+- ⚙️ **Example Configs**: [Config Examples](configs/examples/)
+- 🛠️ **Monitoring Tools**: [Utility Scripts](scripts/)
 
 ---
 
