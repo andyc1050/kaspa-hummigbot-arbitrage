@@ -1,0 +1,87 @@
+##############################
+# Kaspa Arbitrage Strategy
+# Exchange Pair: KuCoin <-> Kraken
+# Strategy: AMM Arbitrage (Built-in)
+##############################
+
+# IMPORTANT: This is an EXAMPLE configuration
+# Copy this file, rename it, and customize for your needs
+# DO NOT commit files with real API keys to GitHub!
+
+strategy: amm_arb
+
+# Primary Exchange (Market 1)
+connector_1: kucoin
+market_1: KAS-USDT
+
+# Secondary Exchange (Market 2)
+connector_2: kraken
+market_2: KAS-USDT
+
+# Trading Parameters
+# ------------------
+
+# Amount of KAS to trade per arbitrage
+# Start small for testing (50-100 KAS)
+# Scale up gradually as you gain confidence
+order_amount: 100.0
+
+# Minimum profitability threshold (0.5% = 0.005)
+# This is the minimum profit required after fees to execute trade
+# Recommended: 0.003-0.008 (0.3%-0.8%)
+# Lower = more trades but less profit per trade
+# Higher = fewer trades but more profit per trade
+min_profitability: 0.005
+
+# Slippage buffer for Market 1 (KuCoin)
+# This accounts for price movement during order execution
+# Recommended: 0.001-0.002 (0.1%-0.2%)
+market_1_slippage_buffer: 0.001
+
+# Slippage buffer for Market 2 (Kraken)
+# Adjust based on exchange liquidity
+# Higher liquidity = lower buffer needed
+market_2_slippage_buffer: 0.001
+
+# Concurrent orders submission
+# true = submit buy and sell orders simultaneously (faster, riskier)
+# false = wait for first order to fill before submitting second (slower, safer)
+# Recommended: true for high liquidity pairs
+concurrent_orders_submission: true
+
+# Optional Parameters
+# --------------------
+
+# Uncomment and adjust as needed:
+
+# Maximum time to keep orders open before cancelling (in seconds)
+# order_refresh_time: 30.0
+
+# Enable debug mode (only check for arbitrage, don't execute)
+# debug_mode: false
+
+# Enable rate oracle
+# use_rate_oracle: false
+
+# Trading fee override (if different from exchange default)
+# taker_fee: 0.001  # 0.1%
+
+# Notes:
+# ------
+# 1. Ensure you have sufficient balance on BOTH exchanges
+#    - KuCoin needs USDT for buying KAS
+#    - Kraken needs KAS for selling
+# 
+# 2. Check trading pair format on each exchange:
+#    - Some use KAS-USDT
+#    - Others use KAS/USDT
+#    - Verify in exchange documentation
+#
+# 3. Monitor your first trades closely
+#    - Use paper trading mode first to test
+#    - Start with small amounts
+#    - Check logs for errors
+#
+# 4. Rebalance regularly
+#    - Move funds between exchanges as needed
+#    - Maintain 50/50 split of USDT and KAS on each

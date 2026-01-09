@@ -1,0 +1,27 @@
+##############################
+# Kaspa Arbitrage Strategy
+# Exchange Pair: KuCoin <-> Bybit
+# Strategy: AMM Arbitrage (Built-in)
+##############################
+
+strategy: amm_arb
+
+# Primary Exchange (Market 1)
+connector_1: kucoin
+market_1: KAS-USDT
+
+# Secondary Exchange (Market 2)
+connector_2: bybit
+market_2: KAS-USDT
+
+# Trading Parameters
+order_amount: 100.0
+min_profitability: 0.005
+market_1_slippage_buffer: 0.001
+market_2_slippage_buffer: 0.001
+concurrent_orders_submission: true
+
+# Bybit-specific notes:
+# - Bybit has good liquidity for KAS
+# - Lower slippage buffer may be possible
+# - Check spot trading fees (usually 0.1% for takers)

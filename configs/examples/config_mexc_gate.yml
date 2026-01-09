@@ -1,0 +1,28 @@
+##############################
+# Kaspa Arbitrage Strategy
+# Exchange Pair: MEXC <-> Gate.io
+# Strategy: AMM Arbitrage (Built-in)
+##############################
+
+strategy: amm_arb
+
+# Primary Exchange (Market 1)
+connector_1: mexc
+market_1: KAS-USDT
+
+# Secondary Exchange (Market 2)
+connector_2: gate_io
+market_2: KAS-USDT
+
+# Trading Parameters
+order_amount: 100.0
+min_profitability: 0.006  # Slightly higher due to potentially lower liquidity
+market_1_slippage_buffer: 0.0015  # MEXC may have slightly lower liquidity
+market_2_slippage_buffer: 0.001
+concurrent_orders_submission: true
+
+# MEXC-specific notes:
+# - MEXC may have lower liquidity than tier-1 exchanges
+# - Use higher slippage buffer (0.15%)
+# - Consider using slightly higher min_profitability (0.6%)
+# - Start with smaller order amounts for testing
